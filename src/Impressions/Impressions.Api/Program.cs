@@ -1,8 +1,8 @@
 using Common;
-using Games.Api;
-using Games.Application;
-using Games.Infrastructure;
 using HealthChecks.UI.Client;
+using Impressions.Api;
+using Impressions.Application;
+using Impressions.Infrastructure;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 
 var builder = WebApplication.CreateBuilder(args);

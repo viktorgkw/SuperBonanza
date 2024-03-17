@@ -9,15 +9,6 @@ public static class CommonServiceRegistration
 {
     public static IServiceCollection AddCommonServices(this IServiceCollection services)
     {
-        services
-            .AddControllers()
-            .AddJsonOptions(options =>
-            {
-                options.JsonSerializerOptions.WriteIndented = true;
-            });
-
-        services.AddEndpointsApiExplorer();
-
         services.AddAutoMapper(Assembly.GetExecutingAssembly());
 
         services.AddSingleton<IRedisProvider, RedisProvider>();
