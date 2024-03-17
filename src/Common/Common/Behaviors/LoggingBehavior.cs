@@ -1,6 +1,7 @@
 ﻿using MediatR;
 using Microsoft.Extensions.Logging;
 using System.Diagnostics;
+using System.Text.Json;
 
 namespace Common.Behaviors;
 
@@ -17,7 +18,7 @@ public class LoggingBehavior<TRequest, TResponse>(
         RequestHandlerDelegate<TResponse> next,
         CancellationToken cancellationToken)
     {
-        _logger.LogInformation("[Start] Request {requestName} started.\n{request}", typeof(TRequest).Name, request);
+        _logger.LogInformation("[Start] {requestName} started.\n{request}", typeof(TRequest).Name, request);
 
         var timer = new Stopwatch();
         timer.Start();
@@ -39,7 +40,11 @@ public class LoggingBehavior<TRequest, TResponse>(
             _logger.LogWarning("[Performance] Request took {seconds} seconds!", timer.Elapsed.Seconds);
         }
 
-        _logger.LogInformation("[Finish] Request {requestName} finished with response {response}.", typeof(TRequest).Name, response);
+        _logger.LogInformation("[Finish] {requestName} finished with response {response}.", typeof(TRequest).Name, JsonSerializer.Serialize(response,
+            new JsonSerializerOptions
+            {
+                WriteIndented = true,
+            }));
 
         return response;
     }

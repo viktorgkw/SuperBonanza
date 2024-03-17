@@ -8,6 +8,8 @@ public static class WebApiServiceRegistration
 {
     public static IServiceCollection AddWebApiServices(this IServiceCollection services)
     {
+        services.AddHealthChecks();
+
         services.AddValidatorsFromAssembly(typeof(Program).Assembly);
 
         services.AddSwaggerGen(delegate (SwaggerGenOptions c)
