@@ -9,12 +9,9 @@ var builder = WebApplication.CreateBuilder(args);
 var services = builder.Services;
 var configuration = builder.Configuration;
 
-services.AddControllers();
-services.AddEndpointsApiExplorer();
-
 services.AddCommonServices();
 services.AddWebApiServices();
-services.AddApplicationServices();
+services.AddApplicationServices(configuration);
 services.AddInfrastructureServices(configuration);
 
 var app = builder.Build();

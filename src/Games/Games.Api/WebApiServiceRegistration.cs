@@ -6,9 +6,13 @@ namespace Games.Api;
 
 public static class WebApiServiceRegistration
 {
-    public static IServiceCollection AddWebApiServices(this IServiceCollection services)
+    public static IServiceCollection AddWebApiServices(
+        this IServiceCollection services,
+        IConfiguration configuration)
     {
-        services.AddHealthChecks();
+        services
+            .AddHealthChecks()
+            .AddNpgSql(configuration.GetConnectionString("Postgres"));
 
         services.AddValidatorsFromAssembly(typeof(Program).Assembly);
 
