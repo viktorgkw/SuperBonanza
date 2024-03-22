@@ -10,6 +10,14 @@ namespace Impressions.Infrastructure;
 public static class InfrastructureServiceRegistration
 {
     public static IServiceCollection AddInfrastructureServices(this IServiceCollection services, IConfiguration configuration)
+        => services
+            .ConfigureServices()
+            .ConfigurePostgreSQL(configuration);
+
+    private static IServiceCollection ConfigureServices(this IServiceCollection services)
+        => services.AddTransient<IImpressionsService, ImpressionsService>();
+
+    private static IServiceCollection ConfigurePostgreSQL(this IServiceCollection services, IConfiguration configuration)
     {
         var connectionString = configuration.GetConnectionString("Postgres");
 
@@ -19,8 +27,6 @@ public static class InfrastructureServiceRegistration
                 .UseNpgsql(connectionString)
                 .UseLazyLoadingProxies();
         }, ServiceLifetime.Transient);
-
-        services.AddTransient<IImpressionsService, ImpressionsService>();
 
         return services;
     }

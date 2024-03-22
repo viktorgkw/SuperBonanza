@@ -7,13 +7,15 @@ namespace Common;
 public static class CommonServiceRegistration
 {
     public static IServiceCollection AddCommonServices(this IServiceCollection services)
-    {
-        services.AddAutoMapper(Assembly.GetExecutingAssembly());
+        => services
+            .ConfigureMapper()
+            .ConfigureGlobalExceptionHandler();
 
-        services
+    private static IServiceCollection ConfigureMapper(this IServiceCollection services)
+        => services.AddAutoMapper(Assembly.GetExecutingAssembly());
+
+    private static IServiceCollection ConfigureGlobalExceptionHandler(this IServiceCollection services)
+        => services
             .AddExceptionHandler<GlobalExceptionHandler>()
             .AddProblemDetails();
-
-        return services;
-    }
 }

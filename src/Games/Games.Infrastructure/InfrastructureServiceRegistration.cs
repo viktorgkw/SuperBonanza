@@ -11,6 +11,16 @@ namespace Games.Infrastructure;
 public static class InfrastructureServiceRegistration
 {
     public static IServiceCollection AddInfrastructureServices(this IServiceCollection services, IConfiguration configuration)
+        => services
+            .ConfigureServices()
+            .ConfigurePostgreSQL(configuration);
+
+    private static IServiceCollection ConfigureServices(this IServiceCollection services)
+        => services
+            .AddScoped<IGamesService, GamesService>()
+            .AddSingleton<IRedisProvider, RedisProvider>();
+
+    private static IServiceCollection ConfigurePostgreSQL(this IServiceCollection services, IConfiguration configuration)
     {
         var connectionString = configuration.GetConnectionString("Postgres");
 
@@ -20,10 +30,6 @@ public static class InfrastructureServiceRegistration
                 .UseNpgsql(connectionString)
                 .UseLazyLoadingProxies();
         }, ServiceLifetime.Transient);
-
-        services.AddScoped<IGamesService, GamesService>();
-
-        services.AddSingleton<IRedisProvider, RedisProvider>();
 
         return services;
     }

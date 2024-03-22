@@ -8,16 +8,18 @@ namespace Games.Application;
 public static class ApplicationServiceRegistration
 {
     public static IServiceCollection AddApplicationServices(this IServiceCollection services, IConfiguration configuration)
-    {
-        services.Configure<RedisStoreSettings>(configuration.GetSection(nameof(RedisStoreSettings)));
+        => services
+            .ConfigureRedisStoreSettings(configuration)
+            .ConfigureMediator();
 
-        services.AddMediatR(cfg =>
+    private static IServiceCollection ConfigureRedisStoreSettings(this IServiceCollection services, IConfiguration configuration)
+        => services.Configure<RedisStoreSettings>(configuration.GetSection(nameof(RedisStoreSettings)));
+
+    private static IServiceCollection ConfigureMediator(this IServiceCollection services)
+        => services.AddMediatR(cfg =>
         {
             cfg.RegisterServicesFromAssemblies(AppDomain.CurrentDomain.GetAssemblies());
             cfg.AddOpenBehavior(typeof(ValidationBehavior<,>));
             cfg.AddOpenBehavior(typeof(LoggingBehavior<,>));
         });
-
-        return services;
-    }
 }
