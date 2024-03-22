@@ -1,4 +1,5 @@
-﻿using Games.Application.Contracts;
+﻿using Common.Providers.Redis;
+using Games.Application.Contracts;
 using Games.Infrastructure.Persistence;
 using Games.Infrastructure.Services;
 using Microsoft.EntityFrameworkCore;
@@ -21,6 +22,8 @@ public static class InfrastructureServiceRegistration
         }, ServiceLifetime.Transient);
 
         services.AddScoped<IGamesService, GamesService>();
+
+        services.AddSingleton<IRedisProvider, RedisProvider>();
 
         return services;
     }

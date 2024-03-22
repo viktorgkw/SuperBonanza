@@ -19,13 +19,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common", "src\Common\Common
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Impressions", "Impressions", "{88E3C04F-A118-40DA-8785-FAF8B9A4C4FD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Impressions.Domain", "src\Impressions\Impressions.Domain\Impressions.Domain.csproj", "{EF3F062A-62A3-4C93-AF61-A15BBF2B063E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Impressions.Domain", "src\Impressions\Impressions.Domain\Impressions.Domain.csproj", "{EF3F062A-62A3-4C93-AF61-A15BBF2B063E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Impressions.Application", "src\Impressions\Impressions.Application\Impressions.Application.csproj", "{EA1BADC1-A7EC-4BA8-BA6D-0851E315E922}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Impressions.Application", "src\Impressions\Impressions.Application\Impressions.Application.csproj", "{EA1BADC1-A7EC-4BA8-BA6D-0851E315E922}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Impressions.Infrastructure", "src\Impressions\Impressions.Infrastructure\Impressions.Infrastructure.csproj", "{60991A9F-F3FD-405E-8D99-44D044933605}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Impressions.Infrastructure", "src\Impressions\Impressions.Infrastructure\Impressions.Infrastructure.csproj", "{60991A9F-F3FD-405E-8D99-44D044933605}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Impressions.Api", "src\Impressions\Impressions.Api\Impressions.Api.csproj", "{0BC73C70-1916-4930-9130-14E505DB1C11}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Impressions.Api", "src\Impressions\Impressions.Api\Impressions.Api.csproj", "{0BC73C70-1916-4930-9130-14E505DB1C11}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

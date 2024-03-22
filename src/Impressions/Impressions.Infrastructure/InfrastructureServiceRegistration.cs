@@ -1,4 +1,6 @@
-﻿using Impressions.Infrastructure.Persistence;
+﻿using Impressions.Application.Contracts;
+using Impressions.Infrastructure.Persistence;
+using Impressions.Infrastructure.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -17,6 +19,8 @@ public static class InfrastructureServiceRegistration
                 .UseNpgsql(connectionString)
                 .UseLazyLoadingProxies();
         }, ServiceLifetime.Transient);
+
+        services.AddTransient<IImpressionsService, ImpressionsService>();
 
         return services;
     }

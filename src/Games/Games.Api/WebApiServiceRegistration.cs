@@ -1,4 +1,5 @@
 ﻿using FluentValidation;
+using Games.Api.HostedServices;
 using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.SwaggerGen;
 
@@ -25,6 +26,10 @@ public static class WebApiServiceRegistration
                 Version = "v1"
             });
         });
+
+        services
+            .AddSingleton<GamesCacherWorkerServices>()
+            .AddHostedService<GamesCacherWorkerServices>();
 
         return services;
     }

@@ -2,5 +2,5 @@
 
 public class RedisStoreSettings
 {
-    public string SomeKey { get; set; }
+    public string GamesHashKey { get; set; }
 }

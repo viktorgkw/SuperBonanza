@@ -2,6 +2,7 @@
 
 public enum ImpressionType
 {
-    Click = 0,
-    Play = 1
+    Interact = 0,
+    Click = 1,
+    Play = 2
 }
