@@ -29,13 +29,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Impressions.Api", "src\Impr
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Authorization", "Authorization", "{82862F2B-9702-4A26-9EC3-2CA829764664}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Authorization.Api", "src\Authorization\Authorization.Api\Authorization.Api.csproj", "{8D56F930-B2F4-4E83-8294-2CCCE0E58F25}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Authorization.Api", "src\Authorization\Authorization.Api\Authorization.Api.csproj", "{8D56F930-B2F4-4E83-8294-2CCCE0E58F25}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Authorization.Domain", "src\Authorization\Authorization.Domain\Authorization.Domain.csproj", "{C411F0C8-5296-41D3-B04F-BFD51BA6E62B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Authorization.Domain", "src\Authorization\Authorization.Domain\Authorization.Domain.csproj", "{C411F0C8-5296-41D3-B04F-BFD51BA6E62B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Authorization.Application", "src\Authorization\Authorization.Application\Authorization.Application.csproj", "{4AB85400-0EE4-4CAB-82F6-FD8A2C946D99}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Authorization.Application", "src\Authorization\Authorization.Application\Authorization.Application.csproj", "{4AB85400-0EE4-4CAB-82F6-FD8A2C946D99}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Authorization.Infrastructure", "src\Authorization\Authorization.Infrastructure\Authorization.Infrastructure.csproj", "{7695DC7A-CAA1-49C7-847F-4EE4DECB54E3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Authorization.Infrastructure", "src\Authorization\Authorization.Infrastructure\Authorization.Infrastructure.csproj", "{7695DC7A-CAA1-49C7-847F-4EE4DECB54E3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
