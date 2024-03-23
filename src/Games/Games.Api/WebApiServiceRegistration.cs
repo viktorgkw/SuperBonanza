@@ -20,8 +20,7 @@ public static class WebApiServiceRegistration
             .AddWorkerConfiguration(configuration);
 
     private static IServiceCollection AddWorkerConfiguration(this IServiceCollection services, IConfiguration configuration)
-        => services
-            .AddSingleton(Options.Create(configuration.GetSection(nameof(WorkerConfiguration)).Get<WorkerConfiguration>()));
+        => services.AddSingleton(Options.Create(configuration.GetSection(nameof(WorkerConfiguration)).Get<WorkerConfiguration>()));
 
     private static IServiceCollection ConfigureHostedServices(this IServiceCollection services)
         => services

@@ -37,6 +37,16 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Authorization.Application",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Authorization.Infrastructure", "src\Authorization\Authorization.Infrastructure\Authorization.Infrastructure.csproj", "{7695DC7A-CAA1-49C7-847F-4EE4DECB54E3}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Entertainment", "Entertainment", "{D8E57FB6-32B7-4F33-97A2-B39AD3A17792}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entertainment.Domain", "src\Entertainment\Entertainment.Domain\Entertainment.Domain.csproj", "{7E55D3A2-46AC-491B-8D76-98DC1D5973A7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entertainment.Application", "src\Entertainment\Entertainment.Application\Entertainment.Application.csproj", "{88A5435F-A2A7-41DB-A5ED-656C9C198C1C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entertainment.Infrastructure", "src\Entertainment\Entertainment.Infrastructure\Entertainment.Infrastructure.csproj", "{8326BB5E-E975-46F6-8B2A-194D1D8F1EE1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entertainment.Api", "src\Entertainment\Entertainment.Api\Entertainment.Api.csproj", "{4C6B85F3-C6F3-4F53-8FDA-775DA295D1D3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -95,6 +105,22 @@ Global
 		{7695DC7A-CAA1-49C7-847F-4EE4DECB54E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7695DC7A-CAA1-49C7-847F-4EE4DECB54E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7695DC7A-CAA1-49C7-847F-4EE4DECB54E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E55D3A2-46AC-491B-8D76-98DC1D5973A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E55D3A2-46AC-491B-8D76-98DC1D5973A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E55D3A2-46AC-491B-8D76-98DC1D5973A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E55D3A2-46AC-491B-8D76-98DC1D5973A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88A5435F-A2A7-41DB-A5ED-656C9C198C1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88A5435F-A2A7-41DB-A5ED-656C9C198C1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88A5435F-A2A7-41DB-A5ED-656C9C198C1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88A5435F-A2A7-41DB-A5ED-656C9C198C1C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8326BB5E-E975-46F6-8B2A-194D1D8F1EE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8326BB5E-E975-46F6-8B2A-194D1D8F1EE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8326BB5E-E975-46F6-8B2A-194D1D8F1EE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8326BB5E-E975-46F6-8B2A-194D1D8F1EE1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C6B85F3-C6F3-4F53-8FDA-775DA295D1D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C6B85F3-C6F3-4F53-8FDA-775DA295D1D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C6B85F3-C6F3-4F53-8FDA-775DA295D1D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C6B85F3-C6F3-4F53-8FDA-775DA295D1D3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -113,6 +139,10 @@ Global
 		{C411F0C8-5296-41D3-B04F-BFD51BA6E62B} = {82862F2B-9702-4A26-9EC3-2CA829764664}
 		{4AB85400-0EE4-4CAB-82F6-FD8A2C946D99} = {82862F2B-9702-4A26-9EC3-2CA829764664}
 		{7695DC7A-CAA1-49C7-847F-4EE4DECB54E3} = {82862F2B-9702-4A26-9EC3-2CA829764664}
+		{7E55D3A2-46AC-491B-8D76-98DC1D5973A7} = {D8E57FB6-32B7-4F33-97A2-B39AD3A17792}
+		{88A5435F-A2A7-41DB-A5ED-656C9C198C1C} = {D8E57FB6-32B7-4F33-97A2-B39AD3A17792}
+		{8326BB5E-E975-46F6-8B2A-194D1D8F1EE1} = {D8E57FB6-32B7-4F33-97A2-B39AD3A17792}
+		{4C6B85F3-C6F3-4F53-8FDA-775DA295D1D3} = {D8E57FB6-32B7-4F33-97A2-B39AD3A17792}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8E509EFB-4CF6-4C9A-A01A-1BCBD5B95EFE}
