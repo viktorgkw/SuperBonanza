@@ -13,10 +13,12 @@ namespace Games.Api.HostedServices;
 /// </summary>
 public class GamesCacherWorkerServices(
     IMediator mediator,
-    IOptions<WorkerConfiguration> workerConfiguration)
+    IOptions<WorkerConfiguration> workerConfiguration,
+    ILogger<GamesCacherWorkerServices> logger)
     : BackgroundService
 {
     private readonly IMediator _mediator = mediator;
+    private readonly ILogger<GamesCacherWorkerServices> _logger = logger;
     private readonly CrontabSchedule _schedule = CrontabSchedule.Parse(workerConfiguration.Value.CronSchedule);
 
     private DateTime _nextRun = DateTime.UtcNow;
@@ -27,6 +29,8 @@ public class GamesCacherWorkerServices(
     protected override async Task ExecuteAsync(CancellationToken cancellationToken)
     {
         await Task.Yield();
+
+        _logger.LogInformation("{ServiceName} has started.", typeof(GamesCacherWorkerServices).Name);
 
         try
         {
@@ -47,12 +51,17 @@ public class GamesCacherWorkerServices(
                 _nextRun = _schedule.GetNextOccurrence(DateTime.UtcNow);
             }
 
+            _logger.LogInformation("Next run at {NextRun}", _nextRun.ToShortDateString());
+
             // Wait another hour
             await Task.Delay(SecondsToWait * SecondInMilliseconds, cancellationToken);
         }
         catch (Exception ex)
         {
-            // log exception
+            _logger.LogInformation(
+                "An error ocurred in {ServiceName}!\n{Exception}",
+                typeof(GamesCacherWorkerServices).Name,
+                ex);
 
             // Wait 5 minutes if an error occurs
             await Task.Delay(300_000, cancellationToken);

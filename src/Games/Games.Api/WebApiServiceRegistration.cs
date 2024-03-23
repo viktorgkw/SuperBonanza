@@ -1,5 +1,7 @@
-﻿using FluentValidation;
+﻿using Common.Configuration;
+using FluentValidation;
 using Games.Api.HostedServices;
+using Microsoft.Extensions.Options;
 using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.SwaggerGen;
 
@@ -14,7 +16,12 @@ public static class WebApiServiceRegistration
             .ConfigureSwagger()
             .ConfigureHealthChecks(configuration)
             .ConfigureFluentValidation()
-            .ConfigureHostedServices();
+            .ConfigureHostedServices()
+            .AddWorkerConfiguration(configuration);
+
+    private static IServiceCollection AddWorkerConfiguration(this IServiceCollection services, IConfiguration configuration)
+        => services
+            .AddSingleton(Options.Create(configuration.GetSection(nameof(WorkerConfiguration)).Get<WorkerConfiguration>()));
 
     private static IServiceCollection ConfigureHostedServices(this IServiceCollection services)
         => services

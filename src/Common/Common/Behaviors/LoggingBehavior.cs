@@ -12,6 +12,10 @@ public class LoggingBehavior<TRequest, TResponse>(
     where TResponse : notnull
 {
     private readonly ILogger<LoggingBehavior<TRequest, TResponse>> _logger = logger;
+    private readonly JsonSerializerOptions _jsonSerializerOptions = new()
+    {
+        WriteIndented = true,
+    };
 
     public async Task<TResponse> Handle(
         TRequest request,
@@ -40,11 +44,7 @@ public class LoggingBehavior<TRequest, TResponse>(
             _logger.LogWarning("[Performance] Request took {seconds} seconds!", timer.Elapsed.Seconds);
         }
 
-        _logger.LogInformation("[Finish] {requestName} finished with response {response}.", typeof(TRequest).Name, JsonSerializer.Serialize(response,
-            new JsonSerializerOptions
-            {
-                WriteIndented = true,
-            }));
+        _logger.LogInformation("[Finish] {requestName} finished with response {response}.", typeof(TRequest).Name, JsonSerializer.Serialize(response, _jsonSerializerOptions));
 
         return response;
     }

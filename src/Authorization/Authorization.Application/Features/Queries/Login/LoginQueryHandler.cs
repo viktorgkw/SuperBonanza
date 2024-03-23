@@ -12,5 +12,5 @@ public class LoginQueryHandler(IAuthorizationService authService)
     public async Task<LoginStatus> Handle(
         LoginQuery request,
         CancellationToken cancellationToken)
-        => await _authService.TryLoginUser(request.LoginModel);
+        => await _authService.TryLoginUser(request.LoginModel, cancellationToken);
 }
