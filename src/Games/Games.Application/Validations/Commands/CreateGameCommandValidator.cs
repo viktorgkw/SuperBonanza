@@ -10,16 +10,20 @@ public class CreateGameCommandValidator : AbstractValidator<CreateGameCommand>
         RuleFor(x => x.Game.Id)
             .NotEmpty()
             .NotNull()
-            .WithMessage("Game Id should not be empty or null!");
+            .WithMessage("Game Id is required!");
 
         RuleFor(x => x.Game.Name)
             .NotEmpty()
             .NotNull()
-            .WithMessage("Game Name should not be empty or null!");
+            .MinimumLength(4)
+            .MaximumLength(18)
+            .WithMessage("Game Name is required!");
 
         RuleFor(x => x.Game.Description)
             .NotEmpty()
             .NotNull()
-            .WithMessage("Game Description should not be empty or null!");
+            .MinimumLength(4)
+            .MaximumLength(18)
+            .WithMessage("Game Description is required!");
     }
 }

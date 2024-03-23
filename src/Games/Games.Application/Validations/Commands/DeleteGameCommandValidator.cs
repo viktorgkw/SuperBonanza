@@ -10,6 +10,6 @@ public class GetGameByIdQueryValidator : AbstractValidator<DeleteGameCommand>
         RuleFor(x => x.GameId)
             .NotEmpty()
             .NotNull()
-            .WithMessage("GameId should not be empty or null!");
+            .WithMessage("GameId is required!");
     }
 }
