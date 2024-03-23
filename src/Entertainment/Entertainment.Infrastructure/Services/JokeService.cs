@@ -12,9 +12,11 @@ public class JokeService(
 {
     private readonly ExternalProviders _externalProviders = externalProviders.Value;
 
+    private const string ChuckNorrisApi = "ChuckNorrisApi";
+
     public async Task<Joke> GetRandomJoke()
     {
-        var jokesApi = RestService.For<IChuckNorrisApi>(_externalProviders.Providers["ChuckNorrisApi"]);
+        var jokesApi = RestService.For<IChuckNorrisApi>(_externalProviders.Providers[ChuckNorrisApi]);
 
         return await jokesApi.GetRandomJoke();
     }
