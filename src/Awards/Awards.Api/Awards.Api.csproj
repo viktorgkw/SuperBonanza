@@ -6,7 +6,12 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+		<PackageReference Include="AspNetCore.HealthChecks.UI.Client" Version="8.0.0" />
 		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\Awards.Infrastructure\Awards.Infrastructure.csproj" />
 	</ItemGroup>
 
 </Project>
