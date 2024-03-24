@@ -6,5 +6,7 @@ public class Award
 {
     public Guid Id { get; set; }
 
+    public Guid PlayerId { get; set; }
+
     public AwardTypes Type { get; set; }
 }

@@ -1,4 +1,4 @@
-﻿namespace Awards.Domain.Enums;
+﻿namespace Common.RabbitMQ.Enums;
 
 public enum AwardTypes
 {

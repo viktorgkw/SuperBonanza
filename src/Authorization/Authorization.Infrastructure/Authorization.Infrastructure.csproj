@@ -13,7 +13,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\Authorization.Application\Authorization.Application.csproj" />
+	  <ProjectReference Include="..\Authorization.Application\Authorization.Application.csproj" />
 	</ItemGroup>
 
 </Project>

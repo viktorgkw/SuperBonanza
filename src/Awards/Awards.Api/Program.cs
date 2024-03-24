@@ -18,9 +18,9 @@ services
     });
 
 services.AddCommonServices();
-services.AddWebApiServices();
+services.AddWebApiServices(configuration);
 services.AddApplicationServices();
-services.AddInfrastructureServices();
+services.AddInfrastructureServices(configuration);
 
 var app = builder.Build();
 

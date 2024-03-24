@@ -16,7 +16,8 @@ public static class InfrastructureServiceRegistration
 
     private static IServiceCollection ConfigureServices(this IServiceCollection services)
         => services
-            .AddTransient<IAuthorizationService, AuthorizationService>();
+            .AddTransient<IAuthorizationService, AuthorizationService>()
+            .AddTransient<IBirthdayAwardsService, BirthdayAwardsService>();
 
     private static IServiceCollection ConfigurePostgreSQL(this IServiceCollection services, IConfiguration configuration)
     {
