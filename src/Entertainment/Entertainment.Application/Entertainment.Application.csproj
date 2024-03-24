@@ -6,12 +6,12 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-	  <PackageReference Include="Refit" Version="7.0.0" />
+		<PackageReference Include="Refit" Version="7.0.0" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\..\Common\Common\Common.csproj" />
-	  <ProjectReference Include="..\Entertainment.Domain\Entertainment.Domain.csproj" />
+		<ProjectReference Include="..\..\Common\Common\Common.csproj" />
+		<ProjectReference Include="..\Entertainment.Domain\Entertainment.Domain.csproj" />
 	</ItemGroup>
 
 </Project>

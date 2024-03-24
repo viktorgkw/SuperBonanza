@@ -57,6 +57,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Awards.Application", "src\A
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Awards.Infrastructure", "src\Awards\Awards.Infrastructure\Awards.Infrastructure.csproj", "{6F04CF95-A615-44F4-8534-98ACED22A96E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.RabbitMQ", "src\Common\Common.RabbitMQ\Common.RabbitMQ.csproj", "{E6386EB9-1268-4A04-8450-7EAB67BEC0D3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -147,6 +149,10 @@ Global
 		{6F04CF95-A615-44F4-8534-98ACED22A96E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6F04CF95-A615-44F4-8534-98ACED22A96E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6F04CF95-A615-44F4-8534-98ACED22A96E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6386EB9-1268-4A04-8450-7EAB67BEC0D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6386EB9-1268-4A04-8450-7EAB67BEC0D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6386EB9-1268-4A04-8450-7EAB67BEC0D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6386EB9-1268-4A04-8450-7EAB67BEC0D3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -173,6 +179,7 @@ Global
 		{23D6DCA3-C328-4000-AE3E-B400503B4FBE} = {F9A5E0E9-339D-4221-8807-ECF4EF89AD41}
 		{AEDB5C7B-A06D-41DF-8033-1A37654B2C2D} = {F9A5E0E9-339D-4221-8807-ECF4EF89AD41}
 		{6F04CF95-A615-44F4-8534-98ACED22A96E} = {F9A5E0E9-339D-4221-8807-ECF4EF89AD41}
+		{E6386EB9-1268-4A04-8450-7EAB67BEC0D3} = {F6EE34E0-0C54-4A5C-AEF8-46B025461EEB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8E509EFB-4CF6-4C9A-A01A-1BCBD5B95EFE}
