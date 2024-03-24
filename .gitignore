@@ -367,3 +367,4 @@ FodyWeavers.xsd
 /src/Impressions/Impressions.Api/Properties/launchSettings.json
 /src/Authorization/Authorization.Api/Properties/launchSettings.json
 /src/Entertainment/Entertainment.Api/Properties/launchSettings.json
+/src/Awards/Awards.Api/Properties/launchSettings.json
